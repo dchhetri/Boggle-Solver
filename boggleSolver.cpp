@@ -7,7 +7,7 @@
 #include <list>
 using namespace std;
 
-//#define DEBUG_
+#define DEBUG_
 
 typedef std::vector<std::string> StringArray;
 typedef StringArray GameBoard;
@@ -58,12 +58,10 @@ ostream& operator <<(ostream& stream, const Vertex::Position& p){
 
 int main(int argc, char *argv[])
 {
-#ifndef DEBUG_
     if(argc < 3){
         usage();
     }
     else
-#endif
     {
         GameBoard board = readBoard(argv[1]);
         StringArray dictionary = readDictionary(argv[2]);
@@ -244,26 +242,11 @@ Neighbors generateNeighbors(const GameBoard& board){
 }
 GameBoard readBoard(const std::string& filePath){
     StringArray board;
-#ifdef DEBUG_
-    srand( time(0));
-    const int N = 4;
-    for(int i = 0; i < N; ++i)
-    {
-        string tmp;
-        for(int j = 0; j < N; ++j)
-        {
-            tmp.push_back( rand() % ('z' - 'a') + 'a');
-            
-        }
-        board.push_back(tmp);
-    }
-#else
     ifstream fileIn(filePath.c_str());
     std::copy(std::istream_iterator<std::string>(fileIn),
               std::istream_iterator<std::string>(),
               std::back_inserter(board));
     
-#endif
     return board;
     
 }
