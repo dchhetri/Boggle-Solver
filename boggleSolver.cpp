@@ -67,7 +67,6 @@ int main(int argc, char *argv[])
         StringArray dictionary = readDictionary(argv[2]);
         Neighbors neighborMap = generateNeighbors(board);
 #ifdef DEBUG_
-        print(board.begin(),board.end(),"\n");
         time_t clkBegin = clock();
 #endif
         StringArray result = generateBoggleSolution(board,dictionary,neighborMap);
