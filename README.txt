@@ -1,0 +1,1 @@
+This is a fast boggle solver. Given a gameboard.txt file and a dictionary file, the program generates all creatable boggle words. Please use it at your own risk! 
