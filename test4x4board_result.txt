@@ -14,6 +14,3 @@ mink
 nim
 plonk
 pol
-Time took = 0.003834s
-Board size = 4x4
-Number of words generated = 16

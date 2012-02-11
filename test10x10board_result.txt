@@ -758,6 +758,3 @@ whole
 whore
 whores
 whorl
-Time took = 0.164434s
-Board size = 10x10
-Number of words generated = 760

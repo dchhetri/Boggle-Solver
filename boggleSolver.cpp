@@ -7,7 +7,7 @@
 #include <list>
 using namespace std;
 
-#define DEBUG_
+//#define DEBUG_
 
 typedef std::vector<std::string> StringArray;
 typedef StringArray GameBoard;
