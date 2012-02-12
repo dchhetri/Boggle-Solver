@@ -7,7 +7,7 @@
 #include <list>
 using namespace std;
 
-#define DEBUG_
+//#define DEBUG_
 
 const int MIN_WORD_SIZE = 3;
 

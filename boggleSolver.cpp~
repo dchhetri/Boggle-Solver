@@ -255,7 +255,7 @@ GameBoard readBoard(const std::string& filePath){
 StringArray readDictionary(const std::string& filePath){
     ifstream fileIn(filePath.c_str());
     StringArray result;
-    result.reserve(80000);
+    result.reserve(100000);
     std::copy(  std::istream_iterator<std::string>(fileIn),
                 std::istream_iterator<std::string>(),
                 std::back_inserter(result));
